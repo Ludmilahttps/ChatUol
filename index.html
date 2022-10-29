@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <title>ChatUol</title>
 </head>
-<body>
-    <header>
-        <img src="">
-        icon
-    </header>
-    <section>
 
+<body>
+    <!-- header-->
+    <header>
+        <img src="assets/logoUOL.png">
+        <ion-icon name="people"></ion-icon>
+    </header>
+
+    <ul id="chat"></ul>
+
+    <!-- footer-->
+    <footer>
+        <label for="input-message">
+            <input class="input-message" type="text" id="input-message" placeholder="Escreva aqui..." />
+        </label>
+        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
+    </footer>
+    <!-- final footer-->
+
+    <section class="login-overlay" id="overlay">
+        <img src="./assets/logoUOL.png" alt="logo do UOl" />
+        <input id="input-login" type="text" placeholder="type your name" extra="getName()" />
+        <button onclick="getName()" >LogIn</button>
     </section>
-    <nav class="none">
-        <title></title>
-        <button>
-            icone
-            <p></p>
-        </button>
-        <button>
-            icone
-            <p></p>
-        </button>
-        <button>
-            icone
-            <p></p>
-        </button>
-        <title></title>
-        <button>
-            icone
-            <p></p>
-        </button>
-        <button>
-            icone
-            <p></p>
-        </button>
-    </nav>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
+
 </html>
