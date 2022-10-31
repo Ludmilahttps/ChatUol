@@ -11,30 +11,61 @@
 </head>
 
 <body>
-    <!-- header-->
-    <header>
-        <img src="assets/logoUOL.png">
-        <ion-icon name="people"></ion-icon>
-    </header>
+    <feed>
+        <!-- header-->
+        <header>
+            <img src="assets/logoUOL.png">
+            <ion-icon name="people" onclick="people()"></ion-icon>
+        </header>
 
-    <ul id="chat"></ul>
+        <ul class="chat" id="chat"></ul>
 
-    <!-- footer-->
-    <footer>
-        <label for="input-message">
-            <input class="input-message" type="text" id="input-message" placeholder="Escreva aqui..." />
-        </label>
-        <ion-icon onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
-    </footer>
-    <!-- final footer-->
+        <!-- footer-->
+        <footer>
+            <label for="input-message">
+                <input class="input-message" type="text" id="input-message" placeholder="Escreva aqui..." />
+            </label>
+            <ion-icon onclick="send()" name="paper-plane-outline" class="send"></ion-icon>
+        </footer>
+        <!-- final footer-->
+    </feed>
 
     <section class="login-overlay" id="overlay">
         <img src="./assets/logoUOL.png" alt="logo do UOl" />
         <input id="input-login" type="text" placeholder="type your name" extra="getName()" />
-        <button onclick="getName()" >LogIn</button>
+        <button onclick="getName()">LogIn</button>
     </section>
 
+    <people class="none">
+        <div class="txt">
+            Escolha um contato<br>para enviar mensagem:
+        </div>
+
+        <div class="usuarios ">
+            <div class="todos" onclick="testando(this)">
+                <ion-icon class='todes' name="people-outline"></ion-icon>
+                <p>Todos</p>
+                <ion-icon class='check' name="checkmark-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="txt">
+            Escolha a visibilidade:
+        </div>
+        <div class="choice" onclick="HabilitarCheck(this)">
+            <ion-icon name="lock-open-outline"></ion-icon>
+            <p>Público</p>
+            <ion-icon class='check' name="checkmark-outline"></ion-icon>
+        </div>
+        <div class="choice" onclick="HabilitarCheck(this)">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <p>Reservadamente</p>
+            <ion-icon class='check' name="checkmark-outline"></ion-icon>
+        </div>
+    </people>
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
 </body>
 
 </html>

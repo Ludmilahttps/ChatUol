@@ -2,6 +2,7 @@
 {
     box-sizing: border-box;
 }
+
 body
 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -9,6 +10,12 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+feed
+{
+    width: 100%;
+    height: 100%;
 }
 
 /*Inicio TOP BAR*/
@@ -75,7 +82,7 @@ footer input
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 3;
 }
 
@@ -101,9 +108,102 @@ footer input
     height: 45px;
     border-radius: 9px;
     border: none;
+    cursor: pointer;
 }
 /*Final OVERLAY*/
 
+/*PEOPLE*/
+people
+{
+    background-color: #FFFFFF;
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.txt
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-align: center;
+}
+
+.todos, .choice
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3%;
+    font-size: 16px;
+}
+
+.todos ion-icon, .choice ion-icon
+{
+    width: 26px;
+    height: 26px;
+}
+
+
+/*CHAT*/
+.chat
+{
+    padding-top: 106px;
+    margin-bottom: 80px;
+}
+ul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f3f3f3;
+}
+  
+li {
+    background-color: rgb(178, 179, 179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+    margin: 4px 0px;
+    border-radius: 2px;
+    word-break: break-word;
+    background-color: white;
+    padding: 0px 9px;
+  }
+
+  .inout
+  {
+    background-color: #DCDCDC;
+  }
+  .private
+  {
+    background-color: #FFDEDE;
+  }
+  
+  strong
+  {
+    font-weight: 700;
+  }
+  .h
+  {
+    color: #AAAAAA;
+  }
+
+
+/*final CHAT*/
 .none
 {
     display: none;
